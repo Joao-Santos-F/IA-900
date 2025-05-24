@@ -1,0 +1,128 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Estilização do body (Corpo da página)*/
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: linear-gradient(135deg, #232020, #B3001B);
+   color: #F8FFF4;
+}
+
+/*Container principal do chat*/
+.chat-container {
+   width: 90%;
+   max-width: 600px;
+   background: #232020;
+   border-radius: 16px;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+}
+
+/*Cabeçalho do chat*/
+.header {
+   background: #B3001B;
+   padding: 16px;
+   text-align: center;
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+/*Área onde as mensagens aparecem */
+.chat-box {
+   flex: 1;
+   padding: 16px;
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   background: #1D1B1B;
+}
+
+/* Estilo geral de mensagem */
+.message {
+   max-width: 80%;
+   padding: 12px 16px;
+   border-radius: 12px;
+}
+
+/* Mensagem do usuário (lado direito) */
+.user-message {
+   align-self: flex-end;
+   background: #B3001B;
+   color: #F8FFF4;
+}
+
+/* Mensagem do bot (lado esquerdo) */
+.bot-message {
+   align-self: flex-start;
+   background: #3A3A3A;
+   color: #F8FFF4;
+}
+
+/* Container do campo de entrada e botão */
+.input-container {
+   display: flex;
+   padding: 16px;
+   gap: 8px;
+   background: #1D1B1B;
+}
+
+/* Campo de texto para digitar mensagens */
+input[type="text"] {
+   flex: 1;
+   padding: 12px;
+   border: 2px solid #B3001B;
+   border-radius: 8px;
+   font-size: 1rem;
+   background: #2e2c2c;
+   color: #F8FFF4;
+}
+
+/* Cor do texto placeholder dentro do input */
+input[type="text"]::placeholder {
+   color: #b3b3b3;
+}
+
+/* Botão de envio */
+button {
+   padding: 12px 16px;
+   background: #B3001B;
+   color: #F8FFF4;
+   border: none;
+   border-radius: 8px;
+   font-size: 1rem;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background-color 0.3s; 
+}
+
+/* Efeito ao passar o mouse no botão */
+button:hover {
+   background: #A10018;
+}
+
+button:active {
+   transform: scale(1.05);
+}
+
+/* Barra de rolagem personalizada (Chrome e derivados) */
+.chat-box::-webkit-scrollbar {
+   width: 8px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+   background: #B3001B;
+   border-radius: 4px;
+}
+
+.chat-box::-webkit-scrollbar-track {
+   background: #2e2c2c;
+}
